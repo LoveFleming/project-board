@@ -1,0 +1,138 @@
+{
+  "id": "ai-factory",
+  "name": "AI 軟體工廠",
+  "icon": "🏭",
+  "description": "可持續生產系統品質的工廠",
+  "status": "in-progress",
+  "startDate": "2026-01-01",
+  "targetDate": "2026-12-31",
+  "repo": "https://github.com/LoveFleming/aprs-fabricmono",
+  "dashboard": "https://dashboard-blue-one-92.vercel.app",
+  "categories": [
+    {
+      "id": "spec-layer",
+      "name": "Spec Layer",
+      "icon": "📐",
+      "description": "最核心 — Spec 驅動一切",
+      "tasks": [
+        { "id": "api-contract", "name": "API Contract (request/response schema)", "status": "done", "priority": "high" },
+        { "id": "error-mapping", "name": "Error Mapping (ErrorType + ErrorCode)", "status": "done", "priority": "high" },
+        { "id": "node-contract", "name": "Node Contract (input/output DTO)", "status": "progress", "priority": "high" },
+        { "id": "node-behavior", "name": "Node 行為定義 (業務語意)", "status": "todo", "priority": "medium" },
+        { "id": "flow-spec", "name": "Flow Spec (node flow + branch)", "status": "todo", "priority": "high" },
+        { "id": "decision-rule", "name": "Decision Rule (skip/fallback/retry)", "status": "todo", "priority": "medium" },
+        { "id": "runbook-spec", "name": "Runbook Spec (錯誤對應處理)", "status": "todo", "priority": "medium" },
+        { "id": "metrics-spec", "name": "Metrics Spec (success/fail/error)", "status": "todo", "priority": "low" },
+        { "id": "log-schema", "name": "Log Schema (trace/node/action)", "status": "todo", "priority": "low" }
+      ]
+    },
+    {
+      "id": "runtime-layer",
+      "name": "Runtime Layer",
+      "icon": "⚙️",
+      "description": "執行底座 — Node Framework 已完成第一步",
+      "tasks": [
+        { "id": "node-base", "name": "Node Base Framework (lifecycle/contract)", "status": "done", "priority": "high" },
+        { "id": "orch-engine", "name": "Orchestrator Engine (flow runner)", "status": "progress", "priority": "high" },
+        { "id": "context-helper", "name": "Context / Helper (node data access)", "status": "progress", "priority": "medium" },
+        { "id": "exception-system", "name": "Exception System (AppException / ErrorType)", "status": "done", "priority": "high" },
+        { "id": "boot-fail-fast", "name": "Boot Fail Fast (startup validation)", "status": "done", "priority": "high" },
+        { "id": "contract-validator", "name": "Contract Validator (schema validate)", "status": "progress", "priority": "medium" }
+      ]
+    },
+    {
+      "id": "ai-workers",
+      "name": "AI 員工 Layer",
+      "icon": "🤖",
+      "description": "核心競爭力 — AI 是員工，人是審查者",
+      "tasks": [
+        { "id": "spec-creator", "name": "Spec Creator (產生 spec)", "status": "todo", "priority": "high" },
+        { "id": "spec-linter", "name": "Spec Linter (檢查 spec)", "status": "todo", "priority": "medium" },
+        { "id": "node-creator", "name": "Node Creator (產 node code)", "status": "todo", "priority": "high" },
+        { "id": "node-reviewer", "name": "Node Reviewer (檢查 node)", "status": "todo", "priority": "medium" },
+        { "id": "unit-test-gen", "name": "Unit Test Generator (100% coverage)", "status": "todo", "priority": "high" },
+        { "id": "e2e-generator", "name": "E2E Generator (Playwright)", "status": "todo", "priority": "medium" },
+        { "id": "runbook-generator", "name": "Runbook Generator (自動生成 runbook)", "status": "todo", "priority": "high" },
+        { "id": "incident-assistant", "name": "Incident Assistant (值班輔助)", "status": "todo", "priority": "medium" },
+        { "id": "legacy-analyzer", "name": "Legacy Analyzer (拆 VB / .NET)", "status": "todo", "priority": "low" }
+      ]
+    },
+    {
+      "id": "quality-gate",
+      "name": "Quality Gate",
+      "icon": "🚧",
+      "description": "Deterministic Gate — 確保品質",
+      "tasks": [
+        { "id": "code-lint", "name": "Lint (ESLint / Sonar)", "status": "todo", "priority": "medium" },
+        { "id": "unit-test", "name": "Unit Test (coverage 100%)", "status": "todo", "priority": "high" },
+        { "id": "spec-validation", "name": "Spec Validation (schema check)", "status": "todo", "priority": "high" },
+        { "id": "contract-test", "name": "Contract Test (request/response)", "status": "todo", "priority": "high" },
+        { "id": "e2e-test", "name": "E2E Test (full flow)", "status": "todo", "priority": "medium" },
+        { "id": "runbook-check", "name": "Runbook Check (是否完整)", "status": "todo", "priority": "medium" },
+        { "id": "pre-prod-replay", "name": "Pre-prod Replay (shadow test)", "status": "todo", "priority": "low" }
+      ]
+    },
+    {
+      "id": "observability",
+      "name": "Observability",
+      "icon": "📡",
+      "description": "Monitoring — 可觀測、可回復",
+      "tasks": [
+        { "id": "api-metrics", "name": "giga_api_outcomes_total (success/fail/error)", "status": "todo", "priority": "medium" },
+        { "id": "node-latency", "name": "Node Latency (node performance)", "status": "todo", "priority": "medium" },
+        { "id": "trace-log", "name": "Trace Log (flow trace)", "status": "todo", "priority": "medium" },
+        { "id": "node-log", "name": "Node Log (node detail)", "status": "todo", "priority": "medium" },
+        { "id": "error-dashboard", "name": "Error Dashboard (error code 聚合)", "status": "progress", "priority": "high" },
+        { "id": "flow-dashboard", "name": "Flow Dashboard (orchestrator 狀態)", "status": "progress", "priority": "high" }
+      ]
+    },
+    {
+      "id": "deployment",
+      "name": "Deployment & Release",
+      "icon": "🚀",
+      "description": "部署 — 安全發布",
+      "tasks": [
+        { "id": "cicd", "name": "CI/CD Pipeline (build + test)", "status": "todo", "priority": "medium" },
+        { "id": "blue-green", "name": "Blue/Green (安全發布)", "status": "todo", "priority": "medium" },
+        { "id": "canary", "name": "Canary (灰度發布)", "status": "todo", "priority": "low" },
+        { "id": "auto-rollback", "name": "Auto Rollback (fail-first)", "status": "todo", "priority": "medium" },
+        { "id": "version-control", "name": "Version Control (spec version)", "status": "todo", "priority": "medium" }
+      ]
+    },
+    {
+      "id": "dx",
+      "name": "Developer Experience",
+      "icon": "🛠️",
+      "description": "DX — 讓開發者順手",
+      "tasks": [
+        { "id": "monorepo", "name": "Monorepo (統一管理)", "status": "todo", "priority": "medium" },
+        { "id": "cli-tool", "name": "CLI Tool (操作 spec/code)", "status": "todo", "priority": "medium" },
+        { "id": "dashboard-ui", "name": "Dashboard UI (AI 工廠 UI)", "status": "progress", "priority": "high" },
+        { "id": "prompt-library", "name": "Prompt Library (AI prompts)", "status": "todo", "priority": "medium" },
+        { "id": "template", "name": "Template (spec template)", "status": "todo", "priority": "medium" }
+      ]
+    },
+    {
+      "id": "closed-loop",
+      "name": "Closed Loop",
+      "icon": "🔄",
+      "description": "最重要 — 持續改善的閉環",
+      "tasks": [
+        { "id": "error-to-runbook", "name": "Error → Runbook (錯誤回饋)", "status": "todo", "priority": "high" },
+        { "id": "runbook-to-spec", "name": "Runbook → Spec (spec 改進)", "status": "todo", "priority": "high" },
+        { "id": "metrics-to-design", "name": "Metrics → Design (架構優化)", "status": "todo", "priority": "medium" },
+        { "id": "incident-to-training", "name": "Incident → AI Training (AI 學習)", "status": "todo", "priority": "high" }
+      ]
+    }
+  ],
+  "milestones": [
+    { "id": "m1", "name": "Node Framework 完成", "date": "2026-04-03", "status": "done", "note": "Fleming 完成第一版 Node Framework" },
+    { "id": "m2", "name": "Dashboard 上線", "date": "2026-04-03", "status": "done", "note": "AI Factory Portal Dashboard 部署至 Vercel" },
+    { "id": "m3", "name": "Error Code Rules v1", "date": "2026-04-03", "status": "done", "note": "Error Code 命名規範制定完成" },
+    { "id": "m4", "name": "Factory Standards 頁面", "date": "2026-04-03", "status": "done", "note": "Dashboard 新增知識庫頁面" },
+    { "id": "m5", "name": "大盤表完成", "date": "2026-04-05", "status": "done", "note": "專案管理儀表板上線" },
+    { "id": "m6", "name": "Orchestrator Engine MVP", "date": null, "status": "progress", "note": "目標：能跑一條完整 flow" },
+    { "id": "m7", "name": "第一個 AI 員工上線", "date": null, "status": "todo", "note": "目標：Runbook Generator" },
+    { "id": "m8", "name": "Full Spec Chain", "date": null, "status": "todo", "note": "目標：需求 → API 合約 → Flow → Node 規格 全串通" }
+  ]
+}
