@@ -108,6 +108,7 @@
         { "id": "monorepo", "name": "Monorepo (統一管理)", "status": "todo", "priority": "medium" },
         { "id": "cli-tool", "name": "CLI Tool (操作 spec/code)", "status": "todo", "priority": "medium" },
         { "id": "dashboard-ui", "name": "Dashboard UI (AI 工廠 UI)", "status": "progress", "priority": "high" },
+        { "id": "opencode-sdk", "name": "OpenCode SDK 整合 (AI 員工對話介面)", "status": "done", "priority": "high" },
         { "id": "prompt-library", "name": "Prompt Library (AI prompts)", "status": "todo", "priority": "medium" },
         { "id": "template", "name": "Template (spec template)", "status": "todo", "priority": "medium" }
       ]
@@ -131,7 +132,8 @@
     { "id": "m3", "name": "Error Code Rules v1", "date": "2026-04-03", "status": "done", "note": "Error Code 命名規範制定完成" },
     { "id": "m4", "name": "Factory Standards 頁面", "date": "2026-04-03", "status": "done", "note": "Dashboard 新增知識庫頁面" },
     { "id": "m5", "name": "大盤表完成", "date": "2026-04-05", "status": "done", "note": "專案管理儀表板上線" },
-    { "id": "m6", "name": "Orchestrator Engine MVP", "date": null, "status": "progress", "note": "目標：能跑一條完整 flow" },
+    { "id": "m6", "name": "OpenCode SDK 整合", "date": "2026-04-07", "status": "done", "note": "@opencode-ai/sdk 整合至 Dashboard，員工可直接與 AI 對話" },
+    { "id": "m6b", "name": "Orchestrator Engine MVP", "date": null, "status": "progress", "note": "目標：能跑一條完整 flow" },
     { "id": "m7", "name": "第一個 AI 員工上線", "date": null, "status": "todo", "note": "目標：Runbook Generator" },
     { "id": "m8", "name": "Full Spec Chain", "date": null, "status": "todo", "note": "目標：需求 → API 合約 → Flow → Node 規格 全串通" }
   ]
