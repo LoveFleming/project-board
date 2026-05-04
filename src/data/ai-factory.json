@@ -2,7 +2,7 @@
   "id": "ai-factory",
   "name": "AI 軟體工廠",
   "icon": "🏭",
-  "description": "可持續生產系統品質的工廠",
+  "description": "Fleming 的公司 side project — AI 軟體工廠。專案執秘（OpenClaw）負責原型開發、大盤記錄、架構建議。公司程式不外流。",
   "status": "in-progress",
   "startDate": "2026-01-01",
   "targetDate": "2026-12-31",
@@ -16,45 +16,39 @@
       "description": "最核心 — Spec 驅動一切",
       "tasks": [
         { "id": "api-contract", "name": "API Contract (request/response schema)", "status": "done", "priority": "high" },
-        { "id": "error-mapping", "name": "Error Mapping (ErrorType + ErrorCode)", "status": "done", "priority": "high" },
-        { "id": "node-contract", "name": "Node Contract (input/output DTO)", "status": "progress", "priority": "high" },
-        { "id": "node-behavior", "name": "Node 行為定義 (業務語意)", "status": "todo", "priority": "medium" },
-        { "id": "flow-spec", "name": "Flow Spec (node flow + branch)", "status": "todo", "priority": "high" },
-        { "id": "decision-rule", "name": "Decision Rule (skip/fallback/retry)", "status": "todo", "priority": "medium" },
-        { "id": "runbook-spec", "name": "Runbook Spec (錯誤對應處理)", "status": "todo", "priority": "medium" },
-        { "id": "metrics-spec", "name": "Metrics Spec (success/fail/error)", "status": "todo", "priority": "low" },
-        { "id": "log-schema", "name": "Log Schema (trace/node/action)", "status": "todo", "priority": "low" }
+        { "id": "node-contract", "name": "Node Contract (input/output DTO)", "status": "done", "priority": "high" },
+        { "id": "node-behavior", "name": "Node spec 行為定義 (業務語意)", "status": "done", "priority": "high" },
+        { "id": "flow-spec", "name": "Flow Spec (node flow + branch, AC, upstream, downstream, metrics, error code)", "status": "done", "priority": "high" },
+        { "id": "runbook-spec", "name": "Runbook Spec (錯誤對應處理)", "status": "progress", "priority": "high" }
       ]
     },
     {
       "id": "runtime-layer",
       "name": "Runtime Layer",
       "icon": "⚙️",
-      "description": "執行底座 — Node Framework 已完成第一步",
+      "description": "執行底座 — Runtime Layer 已完成",
       "tasks": [
         { "id": "node-base", "name": "Node Base Framework (lifecycle/contract)", "status": "done", "priority": "high" },
-        { "id": "orch-engine", "name": "Orchestrator Engine (flow runner)", "status": "progress", "priority": "high" },
-        { "id": "context-helper", "name": "Context / Helper (node data access)", "status": "progress", "priority": "medium" },
+        { "id": "orch-engine", "name": "Orchestrator Engine (flow runner)", "status": "done", "priority": "high" },
+        { "id": "context-helper", "name": "Context / Helper (node data access)", "status": "done", "priority": "medium" },
         { "id": "exception-system", "name": "Exception System (AppException / ErrorType)", "status": "done", "priority": "high" },
         { "id": "boot-fail-fast", "name": "Boot Fail Fast (startup validation)", "status": "done", "priority": "high" },
-        { "id": "contract-validator", "name": "Contract Validator (schema validate)", "status": "progress", "priority": "medium" }
+        { "id": "contract-validator", "name": "Contract Validator (schema validate)", "status": "done", "priority": "medium" }
       ]
     },
     {
       "id": "ai-workers",
       "name": "AI 員工 Layer",
       "icon": "🤖",
-      "description": "核心競爭力 — AI 是員工，人是審查者",
+      "description": "核心競爭力 — AI 是員工，人是審查者。目前：角色設計 + skill 訓練階段",
       "tasks": [
-        { "id": "spec-creator", "name": "Spec Creator (產生 spec)", "status": "todo", "priority": "high" },
-        { "id": "spec-linter", "name": "Spec Linter (檢查 spec)", "status": "todo", "priority": "medium" },
-        { "id": "node-creator", "name": "Node Creator (產 node code)", "status": "todo", "priority": "high" },
-        { "id": "node-reviewer", "name": "Node Reviewer (檢查 node)", "status": "todo", "priority": "medium" },
-        { "id": "unit-test-gen", "name": "Unit Test Generator (100% coverage)", "status": "todo", "priority": "high" },
-        { "id": "e2e-generator", "name": "E2E Generator (Playwright)", "status": "todo", "priority": "medium" },
-        { "id": "runbook-generator", "name": "Runbook Generator (自動生成 runbook)", "status": "todo", "priority": "high" },
-        { "id": "incident-assistant", "name": "Incident Assistant (值班輔助)", "status": "todo", "priority": "medium" },
-        { "id": "legacy-analyzer", "name": "Legacy Analyzer (拆 VB / .NET)", "status": "todo", "priority": "low" }
+        { "id": "crew-design", "name": "AI Crew 角色設計", "status": "done", "priority": "high" },
+        { "id": "marco-spec", "name": "Marco — Spec Architect", "status": "progress", "priority": "high" },
+        { "id": "rex-code", "name": "Rex — Code Forge", "status": "progress", "priority": "high" },
+        { "id": "vera-qa", "name": "Vera — Quality Shield", "status": "progress", "priority": "high" },
+        { "id": "nova-guide", "name": "Nova — Factory Guide (Onboarding, Tutorial)", "status": "progress", "priority": "high" },
+        { "id": "skill-creator", "name": "Little Fleming — Skill Creator (打造、修改 skill)", "status": "progress", "priority": "high" },
+        { "id": "troubleshooter", "name": "Medic — Troubleshooter (觀測、診斷 skill 問題)", "status": "progress", "priority": "high" }
       ]
     },
     {
@@ -105,12 +99,8 @@
       "icon": "🛠️",
       "description": "DX — 讓開發者順手",
       "tasks": [
-        { "id": "monorepo", "name": "Monorepo (統一管理)", "status": "todo", "priority": "medium" },
-        { "id": "cli-tool", "name": "CLI Tool (操作 spec/code)", "status": "todo", "priority": "medium" },
-        { "id": "dashboard-ui", "name": "Dashboard UI (AI 工廠 UI)", "status": "progress", "priority": "high" },
-        { "id": "opencode-sdk", "name": "OpenCode SDK 整合 (AI 員工對話介面)", "status": "done", "priority": "high" },
-        { "id": "prompt-library", "name": "Prompt Library (AI prompts)", "status": "todo", "priority": "medium" },
-        { "id": "template", "name": "Template (spec template)", "status": "todo", "priority": "medium" }
+        { "id": "monorepo", "name": "Monorepo (統一管理)", "status": "progress", "priority": "high" },
+        { "id": "dashboard-ui", "name": "Dashboard UI (AI 工廠 UI)", "status": "progress", "priority": "high" }
       ]
     },
     {
@@ -127,14 +117,11 @@
     }
   ],
   "milestones": [
-    { "id": "m1", "name": "Node Framework 完成", "date": "2026-04-03", "status": "done", "note": "Fleming 完成第一版 Node Framework" },
-    { "id": "m2", "name": "Dashboard 上線", "date": "2026-04-03", "status": "done", "note": "AI Factory Portal Dashboard 部署至 Vercel" },
-    { "id": "m3", "name": "Error Code Rules v1", "date": "2026-04-03", "status": "done", "note": "Error Code 命名規範制定完成" },
-    { "id": "m4", "name": "Factory Standards 頁面", "date": "2026-04-03", "status": "done", "note": "Dashboard 新增知識庫頁面" },
-    { "id": "m5", "name": "大盤表完成", "date": "2026-04-05", "status": "done", "note": "專案管理儀表板上線" },
-    { "id": "m6", "name": "OpenCode SDK 整合", "date": "2026-04-07", "status": "done", "note": "@opencode-ai/sdk 整合至 Dashboard，員工可直接與 AI 對話" },
-    { "id": "m6b", "name": "Orchestrator Engine MVP", "date": null, "status": "progress", "note": "目標：能跑一條完整 flow" },
-    { "id": "m7", "name": "第一個 AI 員工上線", "date": null, "status": "todo", "note": "目標：Runbook Generator" },
-    { "id": "m8", "name": "Full Spec Chain", "date": null, "status": "todo", "note": "目標：需求 → API 合約 → Flow → Node 規格 全串通" }
+    { "id": "m1", "name": "Runtime Layer 完成", "date": "2026-04-17", "status": "done", "note": "Node Base Framework + Orchestrator Engine + Contract Validator 全部完成" },
+    { "id": "m2", "name": "Runtime + 2 API 上線", "date": "2026-04-22", "status": "progress", "note": "重要里程碑！Runtime 搭配兩隻 API 正式上線" },
+    { "id": "m3", "name": "Dashboard 原型上線", "date": "2026-04-03", "status": "done", "note": "AI Factory Portal Dashboard 部署至 Vercel" },
+    { "id": "m4", "name": "AI Crew 角色設計完成", "date": "2026-04-18", "status": "done", "note": "6 位 AI 員工角色定義完成：Marco, Rex, Vera, Nova, Little Fleming, Medic" },
+    { "id": "m5", "name": "第一位 AI 員工上線", "date": null, "status": "todo", "note": "第一個 skill 通過驗證並在生產線使用" },
+    { "id": "m6", "name": "Full Spec Chain", "date": null, "status": "todo", "note": "需求 → API 合約 → Flow → Node 規格 全串通" }
   ]
 }
